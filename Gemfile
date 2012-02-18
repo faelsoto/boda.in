@@ -8,7 +8,7 @@ gem 'rails', '3.2.1'
 gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
-gem 'guard'
+gem 'haml-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,7 +26,6 @@ gem 'jquery-rails'
 
 group :development do
   gem 'guard'
-  gem 'guard-rspec'
   gem 'guard-livereload'
 end
 

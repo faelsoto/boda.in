@@ -1,4 +1,6 @@
 Novias::Application.routes.draw do
+
+  match '' => 'paginas#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

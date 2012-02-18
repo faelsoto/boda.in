@@ -1,0 +1,36 @@
+!!! 5
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 7 ] <html class="ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 8 ] <html class="ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 9 ] <html class="ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if (gt IE 9)|!(IE)] <!--> <html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+%head
+  %meta{ :charset => "utf-8" }
+
+  -# Uncomment to make IE8 render like IE7
+  -# meta http-equiv="X-UA-Compatible" content="IE=7"
+  = javascript_include_tag 'modernizr'
+
+  %title= content_for?(:title) ? yield(:title) : "boda.in"
+  %link(href="/favicon.ico" rel="shortcut icon")
+
+  = csrf_meta_tag
+
+  -# Included CSS Files
+  = stylesheet_link_tag "application"
+
+%body
+  .container
+    %header#header
+    %h1#bodain
+      %a.bgicon{ href: '/'}
+        %span boda.in
+    #main(role="main")
+      = yield
+
+  -# Included JS Files
+  = javascript_include_tag "application"
+  = yield(:javascripts) if content_for?(:javascripts)
+  = render 'base/analytics' if ENV['ANALYTICS_KEY']
