@@ -1,0 +1,21 @@
+%h2 Bienvenido
+%ul#tareas.nolist.nobullet.table.mtable
+  %li.tarea.tcell
+    %header
+      %h3
+        Evento
+    %section.subtareas
+      %ul.nolist.nobullet
+        %li.subtarea
+          %article
+            %h4 Lugar
+          %ul.nobullet.nolist.proveedor
+            %li.nobullet.table.mtable
+              .tcell.t75
+                %h5.titulo.uc Proveedor
+              .tcell.t75
+                %span.precio $2,500
+            .notas
+              Notas bla blab bla
+    %footer
+      %progress( value="25" max="100")

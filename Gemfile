@@ -7,9 +7,10 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 gem 'execjs'
+gem 'jquery-rails'
 gem 'therubyracer'
 gem 'haml-rails'
-gem 'jquery-rails'
+gem 'ancestry'
 
 # Gems used only for assets and not required
 # in production environments by default.
