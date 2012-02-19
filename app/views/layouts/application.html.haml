@@ -31,7 +31,11 @@
         - if user_signed_in?
           = link_to 'Cerrar sesión', destroy_user_session_path, :method => 'delete'
         - else
-          wat
+          %a{ href: "/users/sign_up" }
+            Date de alta
+          o
+          %a{ href: "/users/sign_in" }
+            Accesa tu cuenta
       %menu#barra
         %ul.table.mtable.nolist.nobullet
           %li.foto.tcell
@@ -43,7 +47,7 @@
               - else
                 = "#{@proyecto.novia} & #{@proyecto.novio}"
             %h4.fecha
-              - if @proyecto.blank?
+              - if @proyecto.blank? || !@proyecto.fecha.respond_to?("day")
                 Diciembre 2012
               - else
                 = "#{@proyecto.fecha.strftime("%B #{@proyecto.fecha.day.ordinalize}, %Y")}"
@@ -52,7 +56,7 @@
             %big.gasto
               Tu presupuesto:
               %code
-                - if @proyecto.blank?
+                - if @proyecto.blank?|
                   $100,000.00
                 - else
                   = @proyecto.presupuesto.to_s.gsub(/\D/,'')

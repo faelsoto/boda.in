@@ -1,4 +1,10 @@
 Novias::Application.routes.draw do
+  get "proveedors/index"
+
+  get "proveedors/show"
+
+  get "proveedors/create"
+
   resources :proyectos, :proveedors
 
   devise_for :users

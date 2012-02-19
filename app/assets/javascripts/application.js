@@ -18,4 +18,36 @@ $(document).ready(function(){
     $(this).closest("article").toggleClass("desplegado");
   });
 
+  $(".agregar > a").on("click", function(e){
+    e.preventDefault();
+    $footer = $(this).closest("footer");
+    $form = $footer.siblings("form");
+
+    fields = ["", "", "Proveedor", "Presupuesto", "", "Notas"];
+    if(!$form.length){
+      $form = $("#new_proveedor").clone().attr("id", false).addClass("proveedor-nuevo").insertBefore($footer);
+      $inputs = $form.find("input").each(function(i){
+        $(this).attr("placeholder", fields[i]);
+        if($(this).is("#proveedor_tarea_id")) $(this).val($form.closest(".subtarea").data("tarea-id")).hide();
+      });
+      $form.empty().append($inputs).on("submit", function(e){
+        e.preventDefault();
+        $this = $(this);
+        $article = $(this).closest("article");
+
+        $.ajax({
+          type: $this.attr("method"),
+          url: $this.attr("action"),
+          data: $this.serialize(),
+          success: function(r){
+            $(".proveedor", r).insertBefore($article.find(".agregar"));
+            $article.find(".empty").remove();
+            $this.remove();
+          }
+        })
+      });
+    }
+
+    $form.find(":text")[0].focus()
+  });
 });

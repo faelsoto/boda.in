@@ -64,6 +64,11 @@ ul{
   cursor: hand;
 }
 
+#new_proveedor{ display: none; }
+.proveedor-nuevo input{
+  max-width: 160px;
+}
+
 body{
   background: image-url('layout/background.png');
   .container{
@@ -71,7 +76,6 @@ body{
     margin: 0 auto;
     width: $body_width;
   }
-
   header#header{
     position: relative;
     h1#bodain{
@@ -213,11 +217,19 @@ body{
           font-weight: 200;
           font-size: 1.1em;
         }
+        .empty{
+          text-align: center;
+          color: #ccc;
+        }
       }
       footer{
         padding: 0 0 10px 0;
         text-align: center;
         border-bottom: 1px solid #ddd;
+        .agregar{
+          font-weight: bold;
+          text-align: center;
+        }
       }
     }
     li.checked{

@@ -1,0 +1,11 @@
+%li.proveedor.nobullet.table.mtable
+  .tcell.t75
+    %h5.titulo.uc
+      = @proveedor.name
+  .tcell.t75
+    %span.precio
+      = @proveedor.presupuesto
+- unless @proveedor.notas.blank?
+  .notas
+    %strong Notas:
+    = @proveedor.notas

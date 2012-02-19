@@ -1,16 +1,27 @@
-%li.subtarea.checked
+%li.subtarea.checked{ :"data-tarea-id" => tarea.id }
   %article.desplegado
     %h4.clickable.subtarea-desplegar
       = tarea.titulo
       = tarea.id
     .wrap
       %ul.nobullet.nolist.proveedor
-        %li.nobullet.table.mtable
-          .tcell.t75
-            %h5.titulo.uc Proveedor
-          .tcell.t75
-            %span.precio $2,500
-        .notas
-          Notas bla blab bla
+      - unless tarea.proveedors.blank?
+        - tarea.proveedors.each do |proveedor|
+          %li.nobullet.table.mtable
+            .tcell.t75
+              %h5.titulo.uc
+                = proveedor.name
+            .tcell.t75
+              %span.precio
+                = proveedor.presupuesto
+          - unless proveedor.notas.blank?
+            .notas
+              %strong Notas:
+              = proveedor.notas
+      - else
+        .empty
+          (No hay proveedores)
       %footer
-        footer
+        .agregar
+          %a{ href: "/" }
+            Agregar &raquo;
