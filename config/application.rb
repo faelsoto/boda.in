@@ -37,10 +37,7 @@ module Novias
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-
     config.filter_parameters += [:password]
-    config.assets.initialize_on_precompile = false
-    config.assets.compile = true
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
@@ -57,5 +54,9 @@ module Novias
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile = false
+    config.assets.compile = true
+    config.assets.precompile += %w( modernizr.js )
   end
 end
