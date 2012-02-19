@@ -1,6 +1,3 @@
 class Tarea < ActiveRecord::Base
-  :has_ancestry
-  def index
-    
-  end
+  has_ancestry
 end

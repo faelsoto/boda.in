@@ -11,15 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218222817) do
+ActiveRecord::Schema.define(:version => 20120219013817) do
 
   create_table "tareas", :force => true do |t|
-    t.string   "name"
-    t.string   "ancestry"
+    t.string   "titulo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "ancestry"
   end
-
-  add_index "tareas", ["ancestry"], :name => "index_tareas_on_ancestry"
 
 end
