@@ -1,8 +1,8 @@
 %h3 Platícanos de tu boda
 = semantic_form_for @proyecto do |f|
   = f.inputs do
-    = f.input :novia
-    = f.input :novio
-    = f.input :presupuesto
-    = f.input :fecha
+    = f.input :novia, :label => 'Cuéntanos, ¿quién es la feliz novia?'
+    = f.input :novio, :label => 'Dinos, ¿quién es el afortunado novio?'
+    = f.input :presupuesto, :label => '¿Cuánto tienes pensado gastar?'
+    = f.input :fecha, :label => '¿Cuándo será tu boda?'
   = f.buttons
