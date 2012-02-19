@@ -1,9 +1,10 @@
 Novias::Application.routes.draw do
+  resources :proyectos
 
-  get "proyecto/index"
+#|s  get "proyecto/index"
 
-  get "proyecto/crear"
-  post 'proyecto/crear' => 'proyecto#crear'
+  # get "proyecto/new"
+  # post 'proyecto/new' => 'proyecto#new', :as => :proyecto
 
   devise_for :users
 

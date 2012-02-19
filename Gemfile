@@ -11,6 +11,7 @@ gem 'therubyracer'
 gem 'haml-rails'
 gem 'ancestry'
 gem 'devise'
+gem 'formtastic'
 
 # Gems used only for assets and not required
 # in production environments by default.
