@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  novio: MyString
+  novia: MyString
+  fecha: 2012-02-19
+  presupuesto: 1
+
+two:
+  novio: MyString
+  novia: MyString
+  fecha: 2012-02-19
+  presupuesto: 1

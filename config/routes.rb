@@ -1,5 +1,10 @@
 Novias::Application.routes.draw do
 
+  get "proyecto/index"
+
+  get "proyecto/crear"
+  post 'proyecto/crear' => 'proyecto#crear'
+
   devise_for :users
 
   match '' => 'paginas#index'
