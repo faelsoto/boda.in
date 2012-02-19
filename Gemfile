@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'haml-rails'
 gem 'ancestry'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.

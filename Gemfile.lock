@@ -32,6 +32,7 @@ GEM
     ancestry (1.2.4)
       activerecord (>= 2.2.2)
     arel (3.0.0)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -40,6 +41,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
+    devise (2.0.4)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      railties (~> 3.1)
+      warden (~> 1.1.1)
     em-websocket (0.3.6)
       addressable (>= 2.1.1)
       eventmachine (>= 0.12.9)
@@ -75,6 +81,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    orm_adapter (0.0.6)
     pg (0.13.1)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -123,6 +130,8 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    warden (1.1.1)
+      rack (>= 1.0)
     zurb-foundation (2.1.5.1)
       jquery-rails (>= 1.0)
       rails (~> 3.1)
@@ -133,6 +142,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry
   coffee-rails (~> 3.2.1)
+  devise
   execjs
   guard
   guard-livereload
