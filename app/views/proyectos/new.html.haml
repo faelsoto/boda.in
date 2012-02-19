@@ -1,5 +1,8 @@
 %h3 Platícanos de tu boda
-- semantic_form_for @proyecto do |f|
+= semantic_form_for @proyecto do |f|
   = f.inputs do
     = f.input :novia
+    = f.input :novio
+    = f.input :presupuesto
+    = f.input :fecha
   = f.buttons

@@ -27,6 +27,10 @@
       %h1#bodain
         %a.bgicon.inlineblock{ href: '/'}
           %span boda.in
+      #login
+        - if user_signed_in?
+          = link_to 'Cerrar sesión', destroy_user_session_path, :method => 'delete'
+          = current_user.id
       %menu#barra
         %ul.table.mtable.nolist.nobullet
           %li.foto.tcell

@@ -1,15 +1,13 @@
 Novias::Application.routes.draw do
   resources :proyectos
 
-#|s  get "proyecto/index"
-
-  # get "proyecto/new"
-  # post 'proyecto/new' => 'proyecto#new', :as => :proyecto
-
   devise_for :users
 
   match '' => 'paginas#index'
   match 'tareas' => 'tareas#index'
+
+  match 'proyectos/:id' => 'paginas#show', :as => :proyectos
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
