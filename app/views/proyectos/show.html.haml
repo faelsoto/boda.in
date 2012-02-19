@@ -1,0 +1,12 @@
+= semantic_form_for @proveedor do |f|
+  = f.inputs do
+    = f.input :name
+    = f.input :presupuesto
+    = f.input :tarea_id
+    = f.input :notas, :input_html => { :rows => 10, :cols => 20 }
+  = f.buttons
+
+%section#tareas
+  %ul.nolist.nobullet.table.mtable
+    - unless @tareas.nil?
+      = nested_tarea(@tareas.arrange)

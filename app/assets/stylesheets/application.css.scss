@@ -73,6 +73,7 @@ body{
   }
 
   header#header{
+    position: relative;
     h1#bodain{
       text-align: center;
       height: 36px;
@@ -83,6 +84,11 @@ body{
         width: 99px;
         height: 36px;
       }
+    }
+    #login{
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
     menu#barra{

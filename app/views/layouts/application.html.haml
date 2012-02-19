@@ -30,22 +30,32 @@
       #login
         - if user_signed_in?
           = link_to 'Cerrar sesión', destroy_user_session_path, :method => 'delete'
-          = current_user.id
+        - else
+          wat
       %menu#barra
         %ul.table.mtable.nolist.nobullet
           %li.foto.tcell
             = image_tag 'tmp/foto.jpg'
           %li.datos.tcell
             %h2.pareja
-              Diana & Rodrigo
+              - if @proyecto.blank?
+                Diana & Rodrigo
+              - else
+                = "#{@proyecto.novia} & #{@proyecto.novio}"
             %h4.fecha
-              Diciembre 2012
+              - if @proyecto.blank?
+                Diciembre 2012
+              - else
+                = "#{@proyecto.fecha.strftime("%B #{@proyecto.fecha.day.ordinalize}, %Y")}"
           %li.progreso.tcell
             %progress( max="100" value="54" )
             %big.gasto
-              Hasta ahora te gastarías
+              Tu presupuesto:
               %code
-                $54,000.00
+                - if @proyecto.blank?
+                  $100,000.00
+                - else
+                  = @proyecto.presupuesto.to_s.gsub(/\D/,'')
       #barrashadow
     #main(role="main")
       = yield

@@ -2,6 +2,7 @@
   %header
     %h3.tarea-desplegar
       = tarea.titulo
+      = tarea.id
     = image_tag "layout/icono-#{tarea.titulo.parameterize}.png", class: 'icon'
   %section.subtareas
     %ul.nolist.nobullet

@@ -15,6 +15,8 @@ class ProyectosController < ApplicationController
   end
 
   def show 
-    @proyecto = Proyecto.where :id => params[:id], :user_id => current_user.id
+    @proyecto = Proyecto.where(:id => params[:id], :user_id => current_user.id).first
+    @tareas = Tarea.where("1=1")
+    @proveedor = Proveedor.new
   end
 end
