@@ -1,2 +1,10 @@
-%li
-  = tarea.titulo
+%li.tarea.tcell{ class: "evento-#{tarea.titulo.parameterize}" }
+  %header
+    %h3.tarea-desplegar
+      = tarea.titulo
+  %section.subtareas
+    %ul.nolist.nobullet
+      = nested_sub_tarea(sub_tareas)
+    %footer
+      %a{ href: '/' }
+        Agregar más
