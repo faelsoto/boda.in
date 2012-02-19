@@ -16,7 +16,7 @@
 $(document).ready(function(){
   $("#tareas").on("click", ".subtarea-desplegar", function(e){
     console.log( $(this).closest("article") )
-    $(this).closest("article").find(".wrap").slideUp();
+    $(this).closest("article").toggleClass("desplegado");
   });
 
 });
