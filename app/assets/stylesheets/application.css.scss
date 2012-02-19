@@ -147,8 +147,11 @@ body{
   section#tareas{
     border-collapse: separate;
     border-spacing: 10px 0;
+    padding-top: 20px;
+    overflow: hidden;
     .tarea{
-      width: 200px;
+      width: 185px;
+      min-width: 185px;
       background: #fff;
       border-left: 1px solid #ddd;
       border-right: 1px solid #ddd;
