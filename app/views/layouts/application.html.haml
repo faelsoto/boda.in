@@ -24,9 +24,25 @@
 %body
   .container
     %header#header
-    %h1#bodain
-      %a.bgicon{ href: '/'}
-        %span boda.in
+      %h1#bodain
+        %a.bgicon.inlineblock{ href: '/'}
+          %span boda.in
+      %menu#barra
+        %ul.table.mtable.nolist.nobullet
+          %li.foto.tcell
+            = image_tag 'tmp/foto.jpg'
+          %li.datos.tcell
+            %h2.pareja
+              Diana & Rodrigo
+            %h4.fecha
+              Diciembre 2012
+          %li.progreso.tcell
+            %progress( max="100" value="54" )
+            %big.gasto
+              Hasta ahora te gastarías
+              %code
+                $54,000.00
+      #barrashadow
     #main(role="main")
       = yield
 
