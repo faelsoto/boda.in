@@ -1,28 +1,32 @@
-body{
-  max-width: 480px !important;
-  overflow-x: hidden;
-  *{
-    max-width: 100% !important;
-  }
-  header{
-    text-align: left;
-    padding-top: 20px !important;
-  }
-  #login{
-    font-size: 10px;
-  }
-  .container{
-    #barra, #barrashadow{
-      display: none !important;
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px){
+  /*@media screen and (max-width: 980px) {*/
+
+  body{
+    max-width: 480px !important;
+    overflow-x: hidden;
+    *{
+      max-width: 100% !important;
     }
-  }
-  .tarea{
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-  }
-  .table, .tcell{
-    width: 100%;
-    display: block;
+    header{
+      text-align: left;
+      padding-top: 20px !important;
+    }
+    #login{
+      font-size: 10px;
+    }
+    .container{
+      #barra, #barrashadow{
+        display: none !important;
+      }
+    }
+    .tarea{
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+    }
+    .table, .tcell{
+      width: 100%;
+      display: block;
+    }
   }
 }

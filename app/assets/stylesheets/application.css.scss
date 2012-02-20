@@ -77,7 +77,6 @@ body{
     width: $body_width;
   }
   header#header{
-    position: relative;
     h1#bodain{
       text-align: center;
       height: 36px;
@@ -90,9 +89,12 @@ body{
       }
     }
     #login{
-      position: absolute;
-      top: 0;
-      right: 0;
+      height: 0;
+      text-align: right;
+      width: 100%;
+      background: #f00 !important;
+      position: relative;
+      top: -50px;
     }
 
     menu#barra{

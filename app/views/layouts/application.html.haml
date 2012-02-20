@@ -15,12 +15,12 @@
 
   %title= content_for?(:title) ? yield(:title) : "boda.in"
   %link(href="/favicon.ico" rel="shortcut icon")
-
+  %meta( name="viewport" content="width=device-width; initial-scale=1.0" )
   = csrf_meta_tag
 
   -# Included CSS Files
   = stylesheet_link_tag "application"
-  = stylesheet_link_tag "movil", :media => "screen and (max-device-width: 480px), handheld, screen and (max-width: 300px)"
+  = stylesheet_link_tag "movil"
 
 %body
   .container
